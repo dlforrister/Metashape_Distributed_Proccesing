@@ -173,8 +173,8 @@ class Agisoft:
         )
 
     def align_images(self):
-        #self.chunk.addPhotos(self.image_list())
-        #self.load_image_references()
+        self.chunk.addPhotos(self.image_list())
+        self.load_image_references()
         self.chunk.matchPhotos(
             downscale= self.IMAGE_ACCURACY_MATCHING,
             generic_preselection=True,
