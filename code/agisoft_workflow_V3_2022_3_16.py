@@ -329,8 +329,11 @@ class Agisoft:
         	self.project.save()
         
         if options.step_two_dense_cloud:
+        	print("building dense cloud")
         	self.build_dense_cloud(options.dense_cloud_quality)
+        	print("building DEM")
         	self.chunk.buildDem()
+        	print("building Orthomosaic")
         	self.chunk.buildOrthomosaic(surface_data=Metashape.DataSource.ElevationData)
         	self.project.save()
 

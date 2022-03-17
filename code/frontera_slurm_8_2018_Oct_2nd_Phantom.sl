@@ -27,7 +27,7 @@ export SCRIPT_PATH=/work2/08531/dlforr/frontera/Metashape_Distributed_Proccesing
 export metashape_path=/usr/metashape-pro/metashape.sh
 export singularity_path=/home1/08531/dlforr/metashape_ubuntu_1604_update_v2_latest.sif
 
-singularity exec --nv $singularity_path  $metashape_path -platform offscreen -r $SCRIPT_PATH --step-one-align True --step-two-dense-cloud False --image-type '.JPG' --base-path $BASEPATH --with-export True --image-folder "images" --project-name $PROJECT_NAME >& $BASEPATH/$PROJECT_NAME.log
+singularity exec --nv $singularity_path  $metashape_path -platform offscreen -r $SCRIPT_PATH --step-one-align True --image-type '.JPG' --base-path $BASEPATH --with-export True --image-folder "images" --project-name $PROJECT_NAME >& $BASEPATH/$PROJECT_NAME.log
 
 
 #--continue-proj "3_2021_May_17_Phantom_hist_match_2021_06_01" \
