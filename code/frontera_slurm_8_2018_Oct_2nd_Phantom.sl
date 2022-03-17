@@ -20,7 +20,7 @@ module load python3/3.7.0
 
 # Needed for PDF export in Agisoft using QT
 export BASEPATH=/work2/08531/dlforr/frontera/000_metashape_projects/$PROJECT_NAME
-export SCRIPT_PATH=/work2/08531/dlforr/frontera/Metashape_Distributed_Proccesing/code/agisoft_workflow_V2_2021_11_11.py
+export SCRIPT_PATH=/work2/08531/dlforr/frontera/Metashape_Distributed_Proccesing/code/agisoft_workflow_V3_2022_3_16.py
 
 metashape.sh -platform offscreen \
              -r $SCRIPT_PATH	\
