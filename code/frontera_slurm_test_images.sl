@@ -33,8 +33,6 @@ singularity exec --nv $singularity_path  $metashape_path -platform offscreen -r 
 
 #--continue-proj "3_2021_May_17_Phantom_hist_match_2021_06_01" \
 
-####this is for the test file
-
 
 
 
