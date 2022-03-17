@@ -3,9 +3,8 @@ import datetime
 import glob
 import os
 import sys
-
-import PhotoScan
-import PhotoScan, statistics
+import Metashape
+import Metashape, statistics
 
 
 # Class to automate Agisoft Metashape processing
