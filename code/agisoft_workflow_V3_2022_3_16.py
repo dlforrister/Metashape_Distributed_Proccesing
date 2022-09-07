@@ -314,28 +314,28 @@ class Agisoft:
         
         self.project.save()
         if options.step_one_align == False and options.step_two_dense_cloud == False:
-        	print("No processing step selected. Choos step one or two")
+            print("No processing step selected. Choos step one or two")
         
         if options.step_one_align:
-        	self.align_images()
-        	self.filter_sparse_cloud()
-        	print("Done filtering the sparse cloud")
-        	self.project.save()
-        	self.chunk.buildModel(source_data=Metashape.PointCloudData)
-        	self.chunk.reduceOverlap(overlap = 6)
-        	print("done reducing overlap")
-        	#self.resize_region()
+            self.align_images()
+            self.filter_sparse_cloud()
+            print("Done filtering the sparse cloud")
+            self.project.save()
+            self.chunk.buildModel(source_data=Metashape.PointCloudData)
+            self.chunk.reduceOverlap(overlap = 6)
+            print("done reducing overlap")
+            #self.resize_region()
         	#print("Done resizing the region")
-        	self.project.save()
-        
+            # self.project.save()
+                
         if options.step_two_dense_cloud:
-        	print("building dense cloud")
-        	self.build_dense_cloud(options.dense_cloud_quality)
-        	print("building DEM")
-        	self.chunk.buildDem()
-        	print("building Orthomosaic")
-        	self.chunk.buildOrthomosaic(surface_data=Metashape.DataSource.ElevationData)
-        	self.project.save()
+            print("building dense cloud")
+            self.build_dense_cloud(options.dense_cloud_quality)
+            print("building DEM")
+            self.chunk.buildDem()
+            print("building Orthomosaic")
+            self.chunk.buildOrthomosaic(surface_data=Metashape.DataSource.ElevationData)
+            self.project.save()
 
         if options.with_export:
             self.export_results()
